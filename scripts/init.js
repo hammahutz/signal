@@ -28,8 +28,9 @@ const updateNpmRepo = async (repo) => {
   const { err, stdout, stderr } = await exec(`cd ${repo} && npm update`);
   if (err) {
     log(`Cant update ${repo} due to: ${err}`);
+  } else{
+      log(`Update ${repo} success!`);
   }
-  log(`Update ${repo} success!`);
 };
 
 
