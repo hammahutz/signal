@@ -1,0 +1,6 @@
+[submodule "signal-react"]
+	path = signal-react
+	url = git@github.com:hammahutz/signal-react.git
+[submodule "signal-api"]
+	path = signal-api
+	url = git@github.com:hammahutz/signal-api.git

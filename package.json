@@ -1,0 +1,17 @@
+{
+  "name": "signal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "predev": "node scripts/init.js",
+    "dev": "concurrently \"cd signal-api && npm run dev\" \"cd signal-react && npm run dev\"",
+    "start": "concurrently \"cd signal-api && npm run dev\" \"cd signal-react && npm run dev\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "description": ""
+}
