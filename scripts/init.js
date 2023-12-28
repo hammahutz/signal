@@ -6,7 +6,7 @@ const { log } = require("console");
 const updateGit = async () => {
   log("Update git submodule...");
   const { err, stdout, stderr } = await exec(
-    "git submodule update --init --recursive"
+    "git submodule update --init --recursive --remote && git submodule update --recursive --remote"
   );
   if (err) {
     log(`Cant update git submodle  due to: ${err}`);
@@ -21,6 +21,7 @@ const updateNpm = async () => {
   for (const repo of repos) {
     await updateNpmRepo(repo);
   }
+  await updateNpmRepo(".");
 };
 
 const updateNpmRepo = async (repo) => {
